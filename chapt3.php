@@ -5,28 +5,30 @@
  * Date: 2018/6/4
  * Time: 15:30
  */
+header("Content-type: text/html; charset=utf-8");
+
 echo "Codes in Chapter3<br>";
 
 date_default_timezone_set('Asia/Shanghai');
 $year = date("Y");
 $month = date("n");
 $today = date("j");
-echo "½ñÌìÊÇ£º".$year."Äê".$month."ÔÂ".$today."ÈÕ"."<br>";
+echo "ä»Šå¤©æ˜¯ï¼š".$year."å¹´".$month."æœˆ".$today."æ—¥"."<br>";
 
 $type = isset($_GET['type'])?$_GET['type']:"";
 switch ($type)
 {
     case 'qq':
-        echo "Ö´ĞĞQQµÇÂ¼";
+        echo "æ‰§è¡ŒQQç™»å½•";
         break;
     case 'wechat':
-        echo "Ö´ĞĞÎ¢ĞÅµÇÂ¼";
+        echo "æ‰§è¡Œå¾®ä¿¡ç™»å½•";
         break;
     case 'weibo':
-        echo "Ö´ĞĞÎ¢²©µÇÂ¼";
+        echo "æ‰§è¡Œå¾®åšç™»å½•";
         break;
     default:
-        echo "Ö´ĞĞÆÕÍ¨µÇÂ¼";
+        echo "æ‰§è¡Œæ™®é€šç™»å½•";
 }
 
 $target = 23;
@@ -37,7 +39,7 @@ while($guess != $target){
     $num++;
 }
 
-echo "<br>"."Òª²ÂµÄÊıÊÇ£º".$guess."<br>";
+echo "<br>"."è¦çŒœçš„æ•°æ˜¯ï¼š".$guess."<br>";
 
-echo "ÎÒÃÇ×Ü¹²²ÂÁË".$num."´Î£¡"."<br>";
+echo "æˆ‘ä»¬æ€»å…±çŒœäº†".$num."æ¬¡ï¼"."<br>";
 

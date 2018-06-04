@@ -1,25 +1,26 @@
 <?php
-$str1 = "���տƼ�";
-$str2 = "���޹�˾";
+header("Content-type: text/html; charset=utf-8");
+$str1 = "明日科技";
+$str2 = "有限公司";
 $str = $str1.$str2;
 echo $str;
 echo "<br>";
 $a = 3;
 $b = ++$a;
-echo "ǰ�õ��������aֵΪ��".$a;
+echo "前置递增运算后a值为：".$a;
 echo "<br>";
-echo "bֵΪ��".$b;
+echo "b值为：".$b;
 echo "<br>";
 
 $c = 3;
 $d = $c++;
-echo "���õ��������cֵΪ��".$c;
+echo "后置递增运算后c值为：".$c;
 echo "<br>";
-echo "dֵΪ��".$d;
+echo "d值为：".$d;
 
 echo "<br>";
 $value = 100;
-echo ($value==true)?"��������":"û�и�ֵ";
+echo ($value==true)?"条件运算":"没有该值";
 echo "<br>";
 
 function example($num)
@@ -30,7 +31,7 @@ example(3);
 
 echo "<br>";
 
-echo "�ȽϺ���������ֵ���ݺͰ����ô��ݲ��"."<br>";
+echo "比较函数参数按值传递和按引用传递差别"."<br>";
 
 function test(&$p1, $p2, $p3){
     echo '$p1 is:'.$p1."<br>";
@@ -54,13 +55,13 @@ echo (int)((0.4 + 0.1)*10);
 
 function calc_rmb($yuan, $jiao, $fen){
     echo "<br>";
-    echo "������ܶ�Ϊ��".$yuan."Ԫ".$jiao."��".$fen."��"."<br>";
+    echo "人民币总额为：".$yuan."元".$jiao."角".$fen."分"."<br>";
 
 }
-echo "��������������Ϊ��";
+echo "第三套人民币面额为：";
 calc_rmb(18,8,8);
 
-echo "��������������Ϊ��";
+echo "第五套人民币面额为：";
 calc_rmb(188,8,8);
 
 
