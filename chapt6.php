@@ -33,6 +33,10 @@ $urlPattern = 'index.php?page=(:num)';   //拼接url
 //实例化分页类
 $pageinator = new Pageinator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
 
+//使用array_splice()函数查找元素位置
+
+
+
 
 
 	
