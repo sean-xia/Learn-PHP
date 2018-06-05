@@ -27,68 +27,85 @@ $data = array(
 
 $totalItems = count($data);
 $itemsPerPage = 5;	//每页显示条数
-$currentPage = isset($_GET['Page'])?$_GET['page']:1;  //获取当前页码
-$urlPattern = 'index.php?page=(:num)';   //拼接url
-
+$currentPage = isset($_GET['page']) ? $_GET['page']:1;  //获取当前页码
+$urlPattern = 'chapt6.php?page=(:num)';   //拼接url
+include ('Pageinator.php');
 //实例化分页类
 $pageinator = new Pageinator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
 
 //使用array_splice()函数查找元素位置
+$getData = array_splice($data, ($currentPage-1)*$itemsPerPage, $itemsPerPage);
+?>
+
+<html>
+<head>
+    <!--引入Bootstrap前端UI框架-->
+    <link rel="stylesheet" href="css/bootsctrap.css"></head>
+<body>
+<div class = "container bg-info">
+    <h3>
+        留学新闻列表
+    </h3>
+    <ul>
+        <!--使用foreach遍历数组-->
+        <?php foreach ($getData as $vo){?>
+        <li>
+            <?php echo $vo['title']?>
+        </li>
+        <?php } ?>
+    </ul>
+    <?php
+    //输出分页
+    echo $pageinator;
+    ?>
+</div>
+</body>
+</html>
 
 
 
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
->
